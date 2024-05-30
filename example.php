@@ -1,10 +1,9 @@
 <?php
 
-// without composer: 
-require 'src\NovaJWT.php';
+// without composer: require 'src\NovaJWT.php';
 
 // with composer
-//require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use NovaPHP\JWT\NovaJWT;
 
