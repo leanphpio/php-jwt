@@ -1,5 +1,5 @@
 {
-    "name": "novaphp/php-jwt",
+    "name": "ngphp/php-jwt",
     "description": "NovaJWT is a simple library to encode and decode JSON Web Tokens (JWT) in PHP. This library is part of the LeanPHP framework and was developed by Vedat Yıldırım. It provides methods to generate, validate, and decode JWT tokens, conforming to the current specifications.",
     "homepage": "https://github.com/leanphpio/jwt",
     "keywords": [
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NovaPHP\\JWT\\": "src/"
+            "ngphp\\JWT\\": "src/"
         }
     },
     "require-dev": {
