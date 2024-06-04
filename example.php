@@ -1,16 +1,16 @@
 <?php
 
-// without composer: require 'src\NovaJWT.php';
+// without composer: require 'src\ngphp.php';
 
 // with composer
 require 'vendor/autoload.php';
 
-use NovaPHP\JWT\NovaJWT;
+use ngphp\JWT\NGPHP;
 
 // Initialize the JWT handler with a secret key
 $secret = 'your_secret_key';
 
-$jwt = new NovaJWT($secret);
+$jwt = new NGPHP($secret);
 
 // Example payload
 $payload = [
@@ -40,7 +40,7 @@ $headers = [
 echo "Authenticating User...\n<br>";
 try {
     if ($jwt->authenticate($headers)) {
-        $user = NovaJWT::getUser();
+        $user = NGPHP::getUser();
         echo "Authenticated User: \n<br>";
         print_r($user);
         echo "\n<br>";
@@ -67,7 +67,7 @@ echo "Generated Token: " . $token . "\n";
 echo "<hr><b>Example 2: Token Authentication</b>\n<br>";
 try {
     if ($jwt->authenticate($headers)) {
-        $user = NovaJWT::getUser();
+        $user = NGPHP::getUser();
         echo "Authenticated User: \n<br>";
         print_r($user);
         echo "\n<br>";
