@@ -1,5 +1,5 @@
-# NovaJWT
-NovaJWT is a simple library to encode and decode JSON Web Tokens (JWT) in PHP. This library is part of the LeanPHP framework and was developed by Vedat Yıldırım. It provides methods to generate, validate, and decode JWT tokens, conforming to the current specifications. 
+# NGJWT
+NGJWT is a simple library to encode and decode JSON Web Tokens (JWT) in PHP. This library is part of the LeanPHP framework and was developed by Vedat Yıldırım. It provides methods to generate, validate, and decode JWT tokens, conforming to the current specifications. 
 
 ## Installation
 
@@ -14,16 +14,16 @@ composer install leanphpio/jwt
 ### Generating a JWT
 
 ```
-// without composer: require 'NovaJWT.php';
+// without composer: require 'NGJWT.php';
 
 // with composer
 require 'vendor/autoload.php';
 
-use LeanPHP\JWT\NovaJWT;
+use LeanPHP\JWT\NGJWT;
 
 // Initialize the JWT handler with a secret key
 $secret = 'your_secret_key';
-$jwt = new NovaJWT($secret);
+$jwt = new NGJWT($secret);
 
 // Example payload
 $payload = [
@@ -51,7 +51,7 @@ $headers = [
 // Authenticate the user using the token from the headers
 try {
     if ($jwt->authenticate($headers)) {
-        $user = NovaJWT::getUser();
+        $user = NGJWT::getUser();
         echo "Authenticated User: \n";
         print_r($user);
     }
@@ -81,11 +81,11 @@ Here's a more detailed example that demonstrates generating, storing, authentica
 ```
 require 'vendor/autoload.php';
 
-use leanphp\jwt\NovaJWT;
+use leanphp\jwt\NGJWT;
 
 // Initialize the JWT handler with a secret key
 $secret = 'your_secret_key';
-$jwt = new NovaJWT($secret);
+$jwt = new NGJWT($secret);
 
 // Example payload
 $payload = [
@@ -115,7 +115,7 @@ $headers = [
 echo "Authenticating User...\n";
 try {
     if ($jwt->authenticate($headers)) {
-        $user = NovaJWT::getUser();
+        $user = NGJWT::getUser();
         echo "Authenticated User: \n";
         print_r($user);
         echo "\n";
@@ -144,7 +144,7 @@ echo "\n--------------------------\n";
 echo "Example 2: Token Authentication\n";
 try {
     if ($jwt->authenticate($headers)) {
-        $user = NovaJWT::getUser();
+        $user = NGJWT::getUser();
         echo "Authenticated User: \n";
         print_r($user);
         echo "\n";
@@ -176,5 +176,5 @@ Contributing
 If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on GitHub.
 
 
-This `README.md` provides an overview of the NovaJWT library, including installation instructions, usage examples, and detailed explanations of each method. It also includes a complete example demonstrating how to generate, authenticate, and decode JWT tokens. The repository name `php-jwt` is concise and SEO-friendly, making it easier for users to find your project when searching for JWT solutions in PHP.
+This `README.md` provides an overview of the NGJWT library, including installation instructions, usage examples, and detailed explanations of each method. It also includes a complete example demonstrating how to generate, authenticate, and decode JWT tokens. The repository name `php-jwt` is concise and SEO-friendly, making it easier for users to find your project when searching for JWT solutions in PHP.
 
