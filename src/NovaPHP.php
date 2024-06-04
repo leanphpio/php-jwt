@@ -1,6 +1,6 @@
 <?php
 
-namespace NovaPHP\JWT;
+namespace ngphp\JWT;
 
 /**
  * NovaJWT class for handling JWT operations.
@@ -8,7 +8,7 @@ namespace NovaPHP\JWT;
  * This class is part of the LeanPHP framework and was developed by Vedat Yıldırım.
  * It provides methods to generate, validate, and decode JSON Web Tokens (JWT).
  */
-class NovaJWT
+class NGPHP
 {
     private string $secret;
 
